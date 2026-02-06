@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<title>Happy Holi In Advance</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+*{ box-sizing:border-box; margin:0; padding:0; }
+body{
+  font-family:system-ui,sans-serif;
+  background:radial-gradient(circle at top,#FFD700,#FF4500,#8B0000);
+  color:#fff;
+  overflow-x:hidden;
+  overflow-y:auto;
+}
+.app{
+  width:100%;
+  max-width:360px;
+  margin:0 auto;
+  padding-bottom:160px;
+  position:relative;
+}
+.header{
+  text-align:center;
+  padding:16px 10px 10px 10px;
+  position:relative;
+}
+.header h1{
+  font-size:1.8rem;
+  text-shadow:0 0 15px #FFD700,0 0 25px #FF8C00;
+  margin-bottom:10px;
+}
+.header img{
+  width:260px;
+  max-width:100%;
+  border-radius:16px;
+  box-shadow:0 0 25px #FFD700;
+  display:block;
+  margin:0 auto;
+  position:relative;
+  z-index:1;
+}
+#bgAudioBtn{
+  position:absolute;
+  top:0;
+  left:50%;
+  transform:translateX(-50%);
+  padding:6px 10px;
+  font-size:0.001rem;
+  border-radius:20px;
+  border:none;
+  background:rgba(0,0,0,0.5);
+  color:#fff;
+  cursor:pointer;
+  z-index:5;
+}
+#shubhHeading{
+  margin:10px 0;
+  padding:10px;
+  background:rgba(0,0,0,0.3);
+  border-radius:10px;
+  text-align:center;
+  font-size:1.2rem;
+  font-weight:bold;
+  line-height:1.5em;
+}
+#shubhkamna{
+  margin:10px 0;
+  padding:10px;
+  background:rgba(0,0,0,0.3);
+  border-radius:10px;
+  text-align:left;
+  font-size:1.05rem;
+  line-height:1.5em;
+}
+#nameInput{
+  width:100%;
+  padding:12px;
+  margin:14px 0;
+  font-size:16px;
+  border-radius:8px;
+  border:none;
+  display:block;
+  outline:none;
+}
+.share-btn,.audio-btn,.song-btn{
+  width:100%;
+  padding:14px;
+  font-size:16px;
+  font-weight:bold;
+  border-radius:30px;
+  border:none;
+  cursor:pointer;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:10px;
+  color:#fff;
+  margin-bottom:10px;
+}
+.audio-btn,.song-btn{
+  background: linear-gradient(45deg,#FF8C00,#FFD700,#FF4500);
+}
+.share-btn{
+  background: linear-gradient(45deg,#25D366,#F58529,#E1306C);
+}
+.share-btn:hover,.audio-btn:hover,.song-btn:hover,#bgAudioBtn:hover{ transform:scale(1.05); transition:0.2s; }
+.share-btn img,.audio-btn img,.song-btn img{ width:22px; height:22px; }
+#sayriContainer{
+  max-height:4000px;
+  overflow-y:auto;
+  padding:10px;
+  background:rgba(0,0,0,0.3);
+  border-radius:8px;
+  line-height:1.8em;
+  text-align:left;
+  font-size:1.05rem;
+  margin-bottom:20px;
+  position:relative;
+  z-index:1;
+}
+.firework{
+  position:absolute;
+  width:9px;
+  height:9px;
+  border-radius:50%;
+  opacity:1;
+  z-index:10;
+  pointer-events:none;
+}
+@keyframes explode{
+  0%{transform:translateY(0) scale(1); opacity:1;}
+  80%{opacity:1;}
+  100%{transform:translateY(-230px) scale(0); opacity:0;}
+}
+</style>
+</head>
+<body>
+
+<!-- ===== ADSTERRA TOP BANNER EXACT CODE ===== -->
+<script>
+  atOptions = {
+    'key' : 'ffb78abbdbfa6a86a490f15e57a02c7e',
+    'format' : 'iframe',
+    'height' : 90,
+    'width' : 728,
+    'params' : {}
+  };
+</script>
+<script src="https://www.highperformanceformat.com/ffb78abbdbfa6a86a490f15e57a02c7e/invoke.js"></script>
+
+<div class="app">
+  <div class="header">
+    <h1>शुभ रंगों का त्यौहार के लिए<br>niche scroll karke sayri padhe</h1>
+    <button id="bgAudioBtn">🎵 Background Music</button>
+    <img id="mainGif" src="holi.gif" alt="Happy Holi">
+  </div>
+
+  <div id="shubhHeading">🙏 Holi ki dher sari Shubhkamnaen 🙏</div>
+  <div id="shubhkamna"></div>
+
+  <div class="container" style="padding:16px; position:relative;">
+    <input id="nameInput" placeholder="Apna naam likhe" autocomplete="off">
+    <button class="share-btn" onclick="shareNow()">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg">
+      Share on WhatsApp & Instagram
+    </button>
+
+    <div id="sayriContainer"></div>
+
+    <!-- Songs + Ads -->
+    <!-- RANGELE SONG BUTTON -->
+    <script>
+  atOptions = {
+    'key' : '1a2f80c6d0c9e0f6339f7b1055a5e8a9',
+    'format' : 'iframe',
+    'height' : 50,
+    'width' : 320,
+    'params' : {}
+  };
+</script>
+<script src="https://www.highperformanceformat.com/1a2f80c6d0c9e0f6339f7b1055a5e8a9/invoke.js"></script>
+    <button class="audio-btn" id="audioBtn">🎵 Rangeele Ho Gaye – Hindi Song</button>
+    <script>
+  atOptions = {
+    'key' : 'ce3a6e94dfe6c0d48f94b56fdc4c00be',
+    'format' : 'iframe',
+    'height' : 50,
+    'width' : 320,
+    'params' : {}
+  };
+</script>
+<script src="https://www.highperformanceformat.com/ce3a6e94dfe6c0d48f94b56fdc4c00be/invoke.js"></script>
+    <audio id="holiAudio" src="holisong.mp3"></audio>
+
+    <!-- 4 EXTRA HOLI SONGS BUTTONS -->
+    <button class="song-btn" data-src="holisong1.mp3">🎵 Rang Barse – Hindi Song</button>
+    <script>
+  atOptions = {
+    'key' : 'c50bbdb8091661e6586dfe04ac5cb060',
+    'format' : 'iframe',
+    'height' : 50,
+    'width' : 320,
+    'params' : {}
+  };
+</script>
+<script src="https://www.highperformanceformat.com/c50bbdb8091661e6586dfe04ac5cb060/invoke.js"></script>
+    <button class="song-btn" data-src="holisong2.mp3">🎵 Balam Pichkari – Hindi Song</button>
+    <script>
+  atOptions = {
+    'key' : '4d215d319b1b4936c2cf49c3257efaab',
+    'format' : 'iframe',
+    'height' : 50,
+    'width' : 320,
+    'params' : {}
+  };
+</script>
+<script src="https://www.highperformanceformat.com/4d215d319b1b4936c2cf49c3257efaab/invoke.js"></script>
+    <button class="song-btn" data-src="holisong3.mp3">🎵 Holi Khele Raghuveera – Hindi Song</button>
+    <script>
+  atOptions = {
+    'key' : '4f9006aaa5f2bd1ef24e3cabb9e59a1b',
+    'format' : 'iframe',
+    'height' : 50,
+    'width' : 320,
+    'params' : {}
+  };
+</script>
+<script src="https://www.highperformanceformat.com/4f9006aaa5f2bd1ef24e3cabb9e59a1b/invoke.js"></script>
+    <button class="song-btn" data-src="holisong4.mp3">🎵 Do Me A Favor Let’s Play Holi – Hindi Song</button>
+    <script>
+  atOptions = {
+    'key' : 'c50bbdb8091661e6586dfe04ac5cb060',
+    'format' : 'iframe',
+    'height' : 50,
+    'width' : 320,
+    'params' : {}
+  };
+</script>
+<script src="https://www.highperformanceformat.com/c50bbdb8091661e6586dfe04ac5cb060/invoke.js"></script>
+
+    <audio id="bgAudio" src="India.mp3" loop></audio>
+  </div>
+</div>
+
+<script>
+const bgAudio=document.getElementById("bgAudio");
+bgAudio.volume=0.1;
+const holiAudio=document.getElementById("holiAudio");
+const audioBtn=document.getElementById("audioBtn");
+const nameInput=document.getElementById("nameInput");
+const bgAudioBtn=document.getElementById("bgAudioBtn");
+
+/* Background Audio */
+bgAudioBtn.addEventListener("click",()=>{
+  if(bgAudio.paused){ bgAudio.play().catch(()=>{}); bgAudioBtn.textContent="🔊 Background Music Playing"; }
+  else{ bgAudio.pause(); bgAudioBtn.textContent="🎵 Background Music"; }
+});
+
+/* Rangele Song */
+audioBtn.addEventListener("click",()=>{
+  if(holiAudio.src.includes("holisong.mp3") && !holiAudio.paused){
+    holiAudio.pause(); audioBtn.textContent="🎵 Rangeele Ho Gaye – Hindi Song";
+    if(bgAudio.paused) bgAudio.play();
+  } else {
+    holiAudio.src="holisong.mp3";
+    holiAudio.play().then(()=>{
+      audioBtn.textContent="🎵 Playing Rangeele Ho Gaye…";
+      if(!bgAudio.paused) bgAudio.pause();
+      document.querySelectorAll(".song-btn").forEach(b=>{b.textContent=b.getAttribute("data-original")||b.textContent;});
+    }).catch(()=>{alert("Audio play nahi ho raha");});
+  }
+});
+
+/* Extra Songs */
+document.querySelectorAll(".song-btn").forEach(btn=>{
+  btn.setAttribute("data-original", btn.textContent);
+  btn.addEventListener("click",()=>{
+    const src=btn.getAttribute("data-src");
+    const original=btn.getAttribute("data-original");
+    if(holiAudio.src.includes(src) && !holiAudio.paused){
+      holiAudio.pause(); btn.textContent=original;
+      if(bgAudio.paused) bgAudio.play();
+    } else {
+      holiAudio.src=src;
+      holiAudio.play().then(()=>{
+        document.querySelectorAll(".song-btn").forEach(b=>{b.textContent=b.getAttribute("data-original");});
+        btn.textContent="🎵 Playing "+original.split(" ")[2]+"…";
+        if(!bgAudio.paused) bgAudio.pause();
+      }).catch(()=>{alert("Audio play nahi ho raha");});
+    }
+  });
+});
+
+/* SHARE FUNCTION */
+function shareNow(){
+  const name=nameInput.value.trim()||"Aapki";
+  const text=`🌸 ${name} ki taraf se aapko Holi ki dher sari Shubhkamnaen 🌸\n\n🎯 Link par click kijiye, apna naam dalke share kijiye aur khud bhi celebrate kijiye!\n\n${location.href}`;
+  window.open(`https://wa.me/?text=${encodeURIComponent(text)}`,"_blank");
+}
+
+/* Shubhkamna */
+const shubhLines=[
+"1. रंगों की खुशबू आपके जीवन में छाए",
+"2. गुलाल की तरह रंग भर जाए आपके दिल में",
+"3. दोस्ती और प्यार हमेशा साथ रहे",
+"4. मिठास भरे पल आपके हर दिन में आए",
+"5. हर सुबह नई उमंग और हँसी लाए",
+"6. स्वास्थ्य और सुख आपके घर में रहे",
+"7. उत्सवों की खुशियाँ हमेशा बनी रहें",
+"8. जीवन के हर रंग में प्यार समाए",
+"9. नए साल की तरह उजास और खुशी लाए",
+"10. भगवान का आशीर्वाद हमेशा आपके साथ रहे"
+];
+const shubhDiv=document.getElementById("shubhkamna");
+function updateShubhkamna(){
+  shubhDiv.innerHTML="";
+  shubhLines.forEach(line=>{
+    const p=document.createElement("p");
+    p.textContent=line;
+    p.style.marginBottom="6px";
+    shubhDiv.appendChild(p);
+  });
+}
+updateShubhkamna();
+nameInput.addEventListener("input",()=>{
+  const name=nameInput.value.trim()||"";
+  document.getElementById("shubhHeading").textContent=name?`🙏 ${name} ki taraf se Holi ki dher sari Shubhkamnaen 🙏`:`🙏 Holi ki dher sari Shubhkamnaen 🙏`;
+});
+
+/* 30 LINE SAYRI */
+const sayriLines=[
+"1. दोस्त और परिवार संग खेलें रंग…",
+"2. गुलाल की खुशबू, मस्ती का माहौल…",
+"3. मिठाइयों का स्वाद, प्यार का अहसास…",
+"4. हर दिल में हो खुशियों का प्रकाश…",
+"5. रंग-बिरंगे दिन, हंसी के संग…",
+"6. बचपन की यादें, फिर से जियो…",
+"7. होली का रंग, सबको भाए…",
+"8. मित्रता का रंग, सब पर छाए…",
+"9. गाना गाओ, नाचो और खेलो…",
+"10. हर पल हो उल्लास भरा…",
+"11. गुलाल उड़ाओ, खुशियां बांटो…",
+"12. प्यार का रंग, सबको दिखाओ…",
+"13. नाचो, गाओ, मनाओ त्योहार…",
+"14. दोस्ती और प्यार हमेशा बनाए…",
+"15. जीवन में रंगों की छाया…",
+"16. होली का मज़ा, सबको भाए…",
+"17. रंगों में डूबो, खुशियाँ पाओ…",
+"18. नाचो गाओ, उत्सव मनाओ…",
+"19. मित्रता और प्यार हमेशा निभाओ…",
+"20. गुलाल से रंग भरो, हँसी बटोरो…",
+"21. रंगों का संगम, हर घर में उमंग…",
+"22. मित्रों संग खेलो, होली का आनंद लो…",
+"23. परिवार के संग मस्ती, मिठास की बस्ती…",
+"24. गुलाल और पानी, खुशियों की छाँव…",
+"25. रंगीन दिन, हंसते-खेलते दिन…",
+"26. संगीत और नृत्य, हंसी का अनुभव…",
+"27. सबको प्रेम और प्यार से मिलाओ…",
+"28. होली का उत्सव, सबके दिल में बसाओ…",
+"29. हर रंग में छुपा है स्नेह…",
+"30. दोस्ती का रंग, सबके दिल में रहे…"
+];
+const sayriContainer=document.getElementById("sayriContainer");
+sayriLines.forEach(line=>{
+  const p=document.createElement("p");
+  p.textContent=line;
+  p.style.fontSize="1.05rem";
+  p.style.marginBottom="6px";
+  sayriContainer.appendChild(p);
+});
+
+/* Fireworks */
+function firework(){
+  const app=document.querySelector(".app");
+  for(let i=0;i<5;i++){
+    const f=document.createElement("div");
+    f.className="firework";
+    f.style.left=(Math.random()*260 + 50)+"px";
+    f.style.background=["red","yellow","orange","pink","cyan","lime","violet"][Math.floor(Math.random()*7)];
+    f.style.bottom="0px";
+    f.style.animation="explode 0.7s forwards";
+    app.appendChild(f);
+    setTimeout(()=>f.remove(),700);
+  }
+}
+setInterval(firework,1000);
+</script>
+
+</body>
+</html>
